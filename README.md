@@ -1,5 +1,12 @@
 # SICP
 
+Next: https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html
+
+## Links
+
+- [SICP Home](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
+- [Errata](https://mitpress.mit.edu/sites/default/files/sicp/errata.html)
+
 ## Environment setup
 
 ```
