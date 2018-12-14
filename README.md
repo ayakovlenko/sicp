@@ -1,6 +1,6 @@
 # SICP
 
-Next: https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html
+Next: https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html, Exercise 1.5
 
 ## Links
 
