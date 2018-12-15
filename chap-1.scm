@@ -42,3 +42,26 @@
   (square (second-largest-of-3 a b c))
   )
 )
+
+; Newton's method for finding square roots
+(define
+ (sqrt-iter guess x)
+ (if (is-good-enough? guess x)
+  guess
+  (sqrt-iter (improve-guess guess x) x)
+ )
+)
+
+(define
+ (improve-guess guess x)
+ (average-2 guess (/ x guess))
+)
+
+(define (average-2 x y) (/ (+ x y) 2))
+
+(define
+ (is-good-enough? guess x)
+ (< (abs (- (square guess) x)) 0.0001)
+)
+
+(define (new-sqrt x) (sqrt-iter 1.0 x))
