@@ -44,24 +44,24 @@
 )
 
 ; Newton's method for finding square roots
-(define
- (sqrt-iter guess x)
- (if (is-good-enough? guess x)
-  guess
-  (sqrt-iter (improve-guess guess x) x)
- )
-)
-
-(define
- (improve-guess guess x)
- (average-2 guess (/ x guess))
-)
-
 (define (average-2 x y) (/ (+ x y) 2))
 
-(define
- (is-good-enough? guess x)
- (< (abs (- (square guess) x)) 0.0001)
-)
+(define (new-sqrt x)
+ (define (sqrt-iter guess)
 
-(define (new-sqrt x) (sqrt-iter 1.0 x))
+  (define (improve guess)
+   (average-2 guess (/ x guess))
+  )
+
+  (define (is-good-enough? guess)
+   (< (abs (- (square guess) x)) 0.0001)
+  )
+
+  (if (is-good-enough? guess)
+   guess
+   (sqrt-iter (improve guess))
+  )
+ )
+
+ (sqrt-iter 1.0)
+)
