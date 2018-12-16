@@ -65,7 +65,16 @@ Evaluate the expression:
 (test 0 (p))
 ```
 
-If the interpreter is using applicative-order evaluation, it hang as procedure `p` will recurse indefinetly. As we know from the textbook, `scm` uses applicative-order evaluation, so it is easy to test that it will behave in this way. Interpreters using normal-order evalution will return 0.
+If the interpreter is using applicative-order evaluation, it will freeze as procedure `p` will recurse indefinitely. As we know from the textbook, `scm` uses applicative-order evaluation, so it is easy for us to test this in the interpreter. Interpreters using normal-order evalution will return 0.
+
+Example in Haskell:
+
+```haskell
+> p = p
+> test x y = if x == 0 then 0 else y
+> test 0 p
+0
+```
 
 In **exercise 1.6** we are asked what will be if `if` is defined as a function instead of as a special form, and then previously defined `sqrt` is re-written using the above `new-if`.
 
