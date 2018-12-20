@@ -8,6 +8,7 @@ Chapter 1.1
 
 - [ ] Exercise 1.7
 - [ ] Exercise 1.8
+- [ ] Exercise 1.9
 
 ## Links
 
@@ -17,6 +18,13 @@ Chapter 1.1
 ## Introduction
 
 I'm using `mit-scheme` interpreter for exercises and will be referring to it as `scm` to save some keystrokes.
+
+Improve reading experience:
+
+```js
+$('body').style["width"] = "50%";
+$('body').style["font-family"] = "Verdana"
+```
 
 ## Environment setup
 
