@@ -69,7 +69,7 @@ Define 2 procedures:
 
 Evaluate the expression:
 
-```
+```scheme
 (test 0 (p))
 ```
 
