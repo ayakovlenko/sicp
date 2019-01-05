@@ -30,15 +30,17 @@
   (/ (+ x y) 2))
 
 (define (new-sqrt x)
-  (define (sqrt-iter guess)
+  (define (sqrt-iter guess-new guess-old)
     (define (improve guess)
       (avg-of-2 guess (/ x guess)))
 
-    (define (is-good-enough? guess)
-      (< (abs (- (square guess) x)) 0.0001))
+    (define (is-good-enough? guess-new guess-old)
+      (let ((square-new (square guess-new))
+            (square-old (square guess-old)))
+        (< (abs (- square-old square-new))
+            0.00000001)))
+    (if (is-good-enough? guess-new guess-old)
+      guess-new
+      (sqrt-iter (improve guess-new) guess-new)))
 
-    (if (is-good-enough? guess)
-      guess
-      (sqrt-iter (improve guess))))
-
-  (sqrt-iter 1.0))
+  (sqrt-iter 1.0 2.0))

@@ -6,7 +6,6 @@ TODO:
 
 Chapter 1.1
 
-- [ ] Exercise 1.7
 - [ ] Exercise 1.8
 - [ ] Exercise 1.9
 
