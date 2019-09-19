@@ -22,7 +22,13 @@ Improve reading experience:
 
 ```js
 $('body').style["width"] = "50%";
-$('body').style["font-family"] = "Verdana"
+$('body').style["font-family"] = "Verdana";
+```
+
+Bookmarklet:
+
+```
+javascript:(function()%7Bvar%20b%3Ddocument.getElementsByTagName(%22body%22)%5B0%5D%3Bb.style.width%3D%2250%25%22%2Cb.style%5B%22font-family%22%5D%3D%22Verdana%22%7D)()
 ```
 
 ## Environment setup
